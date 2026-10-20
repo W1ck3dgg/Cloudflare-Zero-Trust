@@ -45,7 +45,7 @@ Use redacted examples and placeholders such as `<ACCOUNT_ID>` and `app.internal.
 
 ## Ownership
 
-- Sponsor / proposer: Walter Heck
+- Proposition: Walter Heck
 - Research and PoC lead: Presiyan Penev
 - IT/security, identity, network, endpoint, privacy, and application owners: to be confirmed during discovery
 
