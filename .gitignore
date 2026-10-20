@@ -1,0 +1,69 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+.dev.vars
+*.secret
+*.secrets
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+credentials.json
+secrets/
+
+# Cloudflare tooling
+.wrangler/
+.cloudflared/
+cloudflared*.log
+warp-diag*/
+warp-debugging-info*/
+
+# Terraform / OpenTofu
+.terraform/
+.tofu/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Test, build, and generated output
+dist/
+build/
+coverage/
+tmp/
+temp/
+*.log
+
+# IDE and operating system files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
