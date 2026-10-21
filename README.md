@@ -4,7 +4,31 @@ Research and planning repository for evaluating Cloudflare Zero Trust as a contr
 
 ## Status
 
-**Phase 0 — research and requirements discovery.** No production configuration has been changed, and the proof of concept (PoC) has not started.
+**PoC started — isolated sample application.** The local demo, Access-token verification, automated security tests, and reusable Cloudflare configuration are implemented. Real Google sign-in and device-policy enforcement still require connecting the Cloudflare account and running the live tests. No company systems are connected.
+
+## Try the demo
+
+With Node.js 22.14+ and pnpm installed:
+
+```powershell
+pnpm install --frozen-lockfile
+pnpm start
+```
+
+Open `http://127.0.0.1:8787`. The introduction page works immediately; the protected page deliberately stays locked until Cloudflare is configured.
+
+Start with the [plain-language PoC guide](docs/poc-guide.md). The [operator runbook](docs/poc-runbook.md) covers connecting Cloudflare, Google login, device checks, and rollback.
+
+```powershell
+pnpm test
+terraform -chdir=infra init -backend=false
+terraform -chdir=infra validate
+terraform -chdir=infra test
+```
+
+The Terraform tests use a mocked provider and never create Cloudflare resources. The application tests use temporary signing keys, not real accounts or tokens.
+
+## Pilot direction
 
 The working recommendation is to evaluate a deliberately small Zero Trust Network Access (ZTNA) pilot:
 
@@ -23,6 +47,9 @@ This lets us test the core proposition — only an approved user on an approved,
 - [Requirements scope](docs/requirements.md) — objectives, functional and non-functional requirements, boundaries, and acceptance criteria.
 - [Discovery questionnaire](docs/discovery-questionnaire.md) — information to collect from Walter, IT, security, and application owners.
 - [Action plan](docs/action-plan.md) — phase gates from discovery through a later PoC and rollout decision.
+- [PoC guide](docs/poc-guide.md) — what is built and the next simple steps.
+- [PoC operator runbook](docs/poc-runbook.md) — live setup and recovery instructions.
+- [Live test checklist](docs/poc-test-checklist.md) — evidence needed to prove real access and device enforcement.
 
 ## Proposed decision path
 

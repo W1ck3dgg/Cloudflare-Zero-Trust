@@ -1,8 +1,8 @@
 # Action plan
 
-This plan separates learning and decision-making from implementation. The PoC is the next major stage only after discovery and design approval.
+The isolated lab implementation began on 2026-10-21 at the user's request. It uses a sample application rather than a company system. Discovery and design approval remain prerequisites for a company-connected pilot.
 
-## Phase 0 — Research and initial scope (current)
+## Phase 0 — Research and initial scope (initial material complete)
 
 **Purpose:** build shared understanding and frame the decision.
 
@@ -72,7 +72,9 @@ Exit gate:
 
 - sponsor, technical owner, security reviewer, app owner, and operations owner approve implementation.
 
-## Phase 3 — PoC implementation (next stage, not started)
+## Phase 3 — PoC implementation (local lab started)
+
+Implemented: local demo application, signed Access-token validation, automated security tests, reusable Terraform configuration, mocked infrastructure tests, and a setup/test/rollback runbook. Pending: live account setup, an appropriate hostname, Google login integration, pilot enrollment, approved-device posture, and real user/device tests. See [the PoC guide](poc-guide.md).
 
 **Purpose:** configure only what the approved experiment requires.
 

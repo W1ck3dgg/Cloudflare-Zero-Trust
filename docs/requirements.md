@@ -1,8 +1,10 @@
 # Requirements scope
 
-Status: draft for stakeholder validation  
-Phase: research and discovery  
-PoC implementation: not started
+Status: draft for stakeholder validation
+
+Phase: isolated lab implementation; company discovery remains open
+
+PoC implementation: local application and reusable configuration built; live Cloudflare, Google login, and device enforcement not yet verified
 
 ## 1. Problem statement
 
@@ -19,7 +21,7 @@ The organization wants to reduce the risk that unauthorized, unmanaged, or unhea
 
 ## 3. Required discovery inputs
 
-The following must be known before the PoC design is approved:
+The following must be known before a company-connected pilot is approved. The initial local sample application does not depend on access to company systems:
 
 | Area | Required input | Owner | Status |
 | --- | --- | --- | --- |
@@ -94,7 +96,7 @@ The following must be known before the PoC design is approved:
 
 ## 7. PoC entry criteria
 
-The PoC may begin only when all of the following are true:
+The company-connected pilot may begin only when all of the following are true. Local implementation and tests against a mock provider may proceed while these details are collected:
 
 - sponsor, technical owner, security reviewer, and support owner are named;
 - pilot users and one low-risk resource are approved;

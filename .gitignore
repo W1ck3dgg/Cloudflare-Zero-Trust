@@ -36,6 +36,10 @@ override.tf.json
 *_override.tf.json
 .terraformrc
 terraform.rc
+*.tfplan
+*.tfplan.json
+.tools/
+local/
 
 # Node.js
 node_modules/

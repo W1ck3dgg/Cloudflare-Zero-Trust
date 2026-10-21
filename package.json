@@ -1,0 +1,13 @@
+{
+  "name": "cloudflare-zero-trust-poc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.14" },
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "start": "node --env-file-if-exists=poc/.env poc/server.mjs",
+    "test": "node --test poc/*.test.mjs"
+  },
+  "dependencies": { "jose": "6.2.13" }
+}
